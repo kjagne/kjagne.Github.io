@@ -1,128 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-	<title>mol</title>
-	<script src="www/jquery-3.2.1.js"></script>
+    <meta charset="UTF-8">
+    <title>Traffic racer</title>
+    <link href="www/style.css" rel="stylesheet" /> </head>
 
-	<style type="text/css">
-		.mol{
-			position: absolute;
-			width: 10%;
-			height: 20%;
-			top: 100%;
-			background-image: url("www/images/m1.gif");
-			background-size: 100% 100%;
-			background-repeat: no-repeat;
-
-		}
-		#mol1{left: 10%;}
-		#mol2{left: 45%;}
-		#mol3{left: 80%;}
-
-		body{
-			background-image: url("www/images/bgk1.jpg");
-			background-size: 100% 100%;
-			background-attachment: fixed;
-			background-repeat: no-repeat;
-			color: white;
-			overflow: hidden;
-		}
-		.scores{
-			position: absolute;
-			float: right;
-			font-size: 3vw;
-			right: 20px;
-			text-shadow: 2px 2px 5px red;
-			z-index: 1;
-			font-family: ravie;
-		}
-		.h1{
-			position: absolute;
-			font-size: 5vw;
-			font-family: ravie;
-			margin-left: 25%;
-			top: 50%;
-			text-shadow: 2px 2px 5px red;
-
-		}
-		.btn{
-			position: absolute;
-			margin-left: 40%;
-			width: 20%;
-			height: 5%;
-			color: white;
-			background-color: #000;
-			font-family: ravie;
-			top: 30%;
-			border-radius: 100px;
-			box-shadow: 2px 3px 10px red;  
-		}
-		.btn:hover{
-			background-color: white;
-			color: #000;
-
-
-		}
-	</style>
-</head>
 <body>
-	<h1 class="hide h1">Let's Play Mol</h1>
-	<h2 class="scores">Score : 0</h2>
-	<button class="hide btn">Start</button>
-	<section id="mol1" class="mol"></section>
-	<section id="mol2" class="mol"></section>
-	<section id="mol3" class="mol"></section>
+    <div id="help">
+        <p>Controls: Right, Left, Up & Down arrow keys.</p>
+    </div>
+    <div id="score_div">
+        Score: <span id="score">0</span>
+    </div>
+    <div id="container" class="hide">
+        <div id="line_1" class="line"></div>
+        <div id="line_2" class="line"></div>
+        <div id="line_3" class="line"></div>
+        <div id="car" class="car">
+            <img src="www/images/car.png" width="50" height="70">
+     
+        </div>
+        <div id="car_1" class="car">
+            <img src="www/images/car1.png" width="50" height="70">
+    
+        </div>
+        <div id="car_2" class="car">
+            <img src="www/images/car2.png" width="50" height="70">
+      
+        </div>
+        <div id="car_3" class="car">
+            <img src="www/images/car3.png" width="50" height="70">
+        </div>
+        <div id="restart_div">
+            <button id="restart">
+                Restart<br>
+                <small class="small_text">(press Enter)</small>
+            </button>
+        </div>
+    </div>
+   
 
-
-	<script type="text/javascript">
-		$(function(){
-			var click = new Audio('www/audio/click.mp3');
-			var vox1 = new Audio('www/audio/yabon.mp3');
-			var vox2 = new Audio('www/audio/wuray.mp3');
-			var add =0;
-				$('.hide, .scores').hide();
-				$('.hide').show(2000);
-						$(':button').click(function(){
-							click.play();
-							$('body').css('background-image', 'url("www/images/bgk2.jpg")')
-							$('.hide').hide(2000);
-							$('.scores').show(1000);
-							$('.mol').animate({'top':'0%'},5000, function(){
-								$('.h1').html('Game Over!!').show(100);
-											$('.mol').hide();
-											vox2.play();
-											$(':button').html('Try Agin').show(100).click(function(){
-												location.reload();
-											});
-								$('body').css('background-image', 'url("www/images/bgk3.jpg")')
-							});
-
-
-							$('.mol').hover(function(){
-								vox1.play();
-								$(this).stop().animate({'top':'100%'},300, 
-									function(){
-										add = add +1;
-										$('.scores').html('Score : ' + add);
-									$(this).animate({'top':'0%'},2000, 
-
-										function(){
-											vox2.play();
-											$('.h1').html('Game Over!!').show(100);
-											$('.mol').hide();
-											$('body').css('background-image', 'url("www/images/bgk3.jpg")')
-											$(':button').html('Try Agin').show(100).click(function(){
-												location.reload();
-											});
-
-										});
-									$(this).css('background-image','url("www/images/m1.gif")')
-								});
-								$(this).css('background-image','url("www/images/m2.gif")')
-							});
-
-						});
-		});
-	</script>
+    <script src="www/jquery.min.js"></script>
+    <script src="www/script.js"></script>
 </body>
+
 </html>
