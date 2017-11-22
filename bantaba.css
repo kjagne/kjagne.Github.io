@@ -1,0 +1,41 @@
+
+
+/* Caption text */
+
+
+
+
+.story  img{
+  width: 100%;
+  top: 0%;
+  left: 0;
+   
+}
+
+
+.regular2, .regular1 {
+  float: left;
+  width: 100%;
+  text-align: center;
+}
+.regular2 p img{
+  width: 98%;
+  height: 300px;
+}
+.regular2 #footer img{
+  width: 25px;
+  height: 25px;
+  padding: 5px 20px 20px 20px;
+}
+
+section{
+  width: 100%;
+  
+}
+.likes{
+  left: 32%;
+  position: absolute;
+}
+#footer{
+  width: 100%;
+}
