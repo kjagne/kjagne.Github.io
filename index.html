@@ -1,128 +1,132 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>mol</title>
-	<script src="www/jquery-3.2.1.js"></script>
+	<title>texting</title>
+  <html  manifest="index.appcache">
+<head>
+<title>Library</title>
+<meta charset='utf-8'/>
+<meta name='format-detection' content='telephone=no' />
+<meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1, maximum-scale=1'/>
 
-	<style type="text/css">
-		.mol{
-			position: absolute;
-			width: 10%;
-			height: 20%;
-			top: 100%;
-			background-image: url("www/images/m1.gif");
-			background-size: 100% 100%;
-			background-repeat: no-repeat;
+<meta name='apple-mobile-web-app-cabable' content='YES'/>
+<meta name='keywords' content='JQM.Show,JQuery Mobile,JQuery,JavaScript,Google Play Store,kara Jagne ,Mobile,Hybrid,HTML,CSS,Responsive,HTML5,JSON,Stringify,Parse'/>
+<meta name='mobile-web-app-capable' content='yes'/>
+<meta name='apple-mobile-web-app-title' content='Library'/>
+<meta name='apple-mobile-web-app-status-bar-style' content='black-translucent.'/>
+<meta name='version' content='1.00' />
+<meta name='generator' content='APP 5.00' />
+<meta name='date' content='2017-11-15 11:30' />
+<meta name='copyright' content='kara Jagne ' />
+<meta name='author' content=' Kara Jagne' />
+<meta name='email' content='karajagne@gmail.com' />
+<!--
+<meta name='website' content='http://www.molgame.cf' />
+-->
+<meta name='description' content='Simple Books Collection. Available from Android Play Store at https://play.google.com/store/apps/details?id=com.b4a.JQMShow' />
+<link rel="apple-touch-icon" href="apps.png">
+<link rel="icon" type="image/png" href="apps.png">
+<link rel="shortcut icon" type="image/png" href="apps.png">
+<link rel="apple-touch-icon" sizes="57x57" href="apps57.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apps72.png">
+<link rel="apple-touch-icon" sizes="80x80" href="apps80.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apps114.png">
 
-		}
-		#mol1{left: 10%;}
-		#mol2{left: 45%;}
-		#mol3{left: 80%;}
+<script src="jquery-3.2.1.js"></script>
+<script src="bantaba.js"></script>
+<link rel="stylesheet" type="text/css" href="bantaba.css">
 
-		body{
-			background-image: url("www/images/bgk1.jpg");
-			background-size: 100% 100%;
-			background-attachment: fixed;
-			background-repeat: no-repeat;
-			color: white;
-			overflow: hidden;
-		}
-		.scores{
-			position: absolute;
-			float: right;
-			font-size: 3vw;
-			right: 20px;
-			text-shadow: 2px 2px 5px red;
-			z-index: 1;
-			font-family: ravie;
-		}
-		.h1{
-			position: absolute;
-			font-size: 5vw;
-			font-family: ravie;
-			margin-left: 25%;
-			top: 50%;
-			text-shadow: 2px 2px 5px red;
+<link rel="apple-touch-icon-precomposed" href="appsIconPreComposed.png">
+<link rel="apple-touch-startup-image" href="appsIconStartUp320by460.png">
+<link rel="stylesheet" href="toastr.min.css">
+<link rel="stylesheet" href="jqm-datebox.css">
+<link rel="stylesheet" href="animate.css">
+<link rel="stylesheet" href="addtohomescreen.css">
+<link rel="stylesheet" href="jquery.mobile-1.4.5.min.css">
+<script src="jquery.min.js" type="text/javascript"></script>
+<script src="jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+<script src="navbar.js" type="text/javascript"></script>
+<script src="jqm-datebox.core.js" type="text/javascript"></script>
+<script src="jqm-datebox.mode.slidebox.js" type="text/javascript"></script>
+<script src="jqm-datebox.mode.flipbox.js" type="text/javascript"></script>
+<script src="jqm-datebox.mode.datebox.js" type="text/javascript"></script>
+<script src="jqm-datebox.mode.customflip.js" type="text/javascript"></script>
+<script src="jqm-datebox.mode.custombox.js" type="text/javascript"></script>
+<script src="jqm-datebox.mode.calbox.js" type="text/javascript"></script>
+<script src="toastr.min.js" type="text/javascript"></script>
+<script src="fastclick.js" type="text/javascript"></script>
+<!--[if IE]>
+<script src="html5.js" type="text/javascript"></script>
+<![endif]-->
+<script src="stanfordcryptolibrary.js" type="text/javascript"></script>
+<script src="excellentexport.min.js" type="text/javascript"></script>
+<script src="d3.min.js" type="text/javascript"></script>
+<script src="d3tree.js" type="text/javascript"></script>
+<script src="addtohomescreen.min.js" type="text/javascript"></script>
+<script src="remoteserver.js" type="text/javascript"></script>
+<script src="support.js" type="text/javascript"></script>
+<script src="app.js" type="text/javascript"></script>
 
-		}
-		.btn{
-			position: absolute;
-			margin-left: 40%;
-			width: 20%;
-			height: 5%;
-			color: white;
-			background-color: #000;
-			font-family: ravie;
-			top: 30%;
-			border-radius: 100px;
-			box-shadow: 2px 3px 10px red;  
-		}
-		.btn:hover{
-			background-color: white;
-			color: #000;
+<!-- ---------coment link---------- -->
+<link rel="stylesheet" type="text/css" href="css/jquery-comments.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+ 
+<script type="text/javascript" src="js/lib/jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="js/jquery-comments.js"></script>
+<!-- ---------coment link---------- -->
+	<!---------------- / Firebase Sign In---------------->
+	<!--------- page 1 ------------>
+
+<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBkgvy_R2m7zINN-h9hx6bet898nlVjcWo",
+    authDomain: "exex-533ca.firebaseapp.com",
+    databaseURL: "https://exex-533ca.firebaseio.com",
+    projectId: "exex-533ca",
+    storageBucket: "exex-533ca.appspot.com",
+    messagingSenderId: "944334652590"
+  };
+  firebase.initializeApp(config);
+</script>
 
 
-		}
-	</style>
+<!--------- page 2 ------------>
+<script src="https://cdn.firebase.com/libs/firebaseui/2.4.1/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.4.1/firebaseui.css" />
+    <script type="text/javascript">
+      // FirebaseUI config.
+      var uiConfig = {
+        signInSuccessUrl: 'home.html',
+        signInOptions: [
+          // Leave the lines as is for the providers you want to offer your users.
+          firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+          firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+          firebase.auth.TwitterAuthProvider.PROVIDER_ID,
+          firebase.auth.GithubAuthProvider.PROVIDER_ID,
+          firebase.auth.EmailAuthProvider.PROVIDER_ID,
+          firebase.auth.PhoneAuthProvider.PROVIDER_ID
+        ],
+        // Terms of service url.
+        tosUrl: '<your-tos-url>'
+      };
+
+      // Initialize the FirebaseUI Widget using Firebase.
+      var ui = new firebaseui.auth.AuthUI(firebase.auth());
+      // The start method will wait until the DOM is loaded.
+      ui.start('#firebaseui-auth-container', uiConfig);
+    </script>	
+<!---------------- / Firebase Sign In---------------->
+
+
+	<script src="jquery-3.2.1.js"></script>
 </head>
 <body>
-	<h1 class="hide h1">Let's Play Mol</h1>
-	<h2 class="scores">Score : 0</h2>
-	<button class="hide btn">Start</button>
-	<section id="mol1" class="mol"></section>
-	<section id="mol2" class="mol"></section>
-	<section id="mol3" class="mol"></section>
+	<h1 style="text-align: center; font-style: italic;">Bantaba</h1>
+	<div style="margin-top: 10%;" id="firebaseui-auth-container"></div>
 
 
-	<script type="text/javascript">
-		$(function(){
-			var click = new Audio('www/audio/click.mp3');
-			var vox1 = new Audio('www/audio/yabon.mp3');
-			var vox2 = new Audio('www/audio/wuray.mp3');
-			var add =0;
-				$('.hide, .scores').hide();
-				$('.hide').show(2000);
-						$(':button').click(function(){
-							click.play();
-							$('body').css('background-image', 'url("www/images/bgk2.jpg")')
-							$('.hide').hide(2000);
-							$('.scores').show(1000);
-							$('.mol').animate({'top':'0%'},5000, function(){
-								$('.h1').html('Game Over!!').show(100);
-											$('.mol').hide();
-											vox2.play();
-											$(':button').html('Try Agin').show(100).click(function(){
-												location.reload();
-											});
-								$('body').css('background-image', 'url("www/images/bgk3.jpg")')
-							});
 
-
-							$('.mol').hover(function(){
-								vox1.play();
-								$(this).stop().animate({'top':'100%'},300, 
-									function(){
-										add = add +1;
-										$('.scores').html('Score : ' + add);
-									$(this).animate({'top':'0%'},2000, 
-
-										function(){
-											vox2.play();
-											$('.h1').html('Game Over!!').show(100);
-											$('.mol').hide();
-											$('body').css('background-image', 'url("www/images/bgk3.jpg")')
-											$(':button').html('Try Agin').show(100).click(function(){
-												location.reload();
-											});
-
-										});
-									$(this).css('background-image','url("www/images/m1.gif")')
-								});
-								$(this).css('background-image','url("www/images/m2.gif")')
-							});
-
-						});
-		});
-	</script>
 </body>
 </html>
